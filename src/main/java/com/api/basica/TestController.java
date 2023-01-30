@@ -33,11 +33,11 @@ public class TestController {
         List<Producto>  listaProductos= new ArrayList<>();
 
         listaProductos.add(new Producto(1 , "Televisor","Televisor de 21 pulgadas",5600.00));
-        listaProductos.add(new Producto(2 , "Monitor","Televisor de 21 pulgadas",5600.00));
-        listaProductos.add(new Producto(3 , "Computador","Televisor de 21 pulgadas",5600.00));
-        listaProductos.add(new Producto(4 , "Refrigerador","Televisor de 21 pulgadas",5600.00));
-        listaProductos.add(new Producto(5 , "Escritorio","Televisor de 21 pulgadas",5600.00));
-        listaProductos.add(new Producto(6 , "Mesa","Televisor de 21 pulgadas",5600.00));
+        listaProductos.add(new Producto(2 , "Monitor","Monitor de 21 pulgadas",6600.00));
+        listaProductos.add(new Producto(3 , "Computador","Computador de 21 pulgadas",7600.00));
+        listaProductos.add(new Producto(4 , "Refrigerador","Refrigerador de 21 pulgadas",8600.00));
+        listaProductos.add(new Producto(5 , "Escritorio","Escritorio de 21 pulgadas",9600.00));
+        listaProductos.add(new Producto(6 , "Mesa","Mesa de 21 pulgadas",3600.00));
 
         return listaProductos;
     }
