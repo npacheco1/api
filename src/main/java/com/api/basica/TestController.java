@@ -1,14 +1,14 @@
 package com.api.basica;
 
 import com.api.basica.model.Producto;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-
+@Slf4j
 public class TestController {
     @GetMapping("/hello")
     public String hello(){
@@ -24,6 +24,26 @@ public class TestController {
     public Producto get(){
         return new Producto(1 , "Televisor","Televisor de 21 pulgadas",5600.00);
     }
+
+
+    @GetMapping("/producto/{id}")
+    public Producto getProduct(@PathVariable Integer id){
+
+        for (Producto p: getProductos() ) {
+            if (p.getId() == id){
+                return p;
+            }
+
+        }
+            return  null;
+    }
+    @PostMapping("/producto")
+    public String recibeProducto(@RequestBody Producto producto){
+        log.info("ID de producto {}", producto.getId());
+        return "Prodcuto Recibido";
+    }
+
+
 
     @GetMapping("/productos")
     public List<Producto> getProducts(){
@@ -41,4 +61,6 @@ public class TestController {
 
         return listaProductos;
     }
+
+
 }
